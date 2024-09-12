@@ -1,0 +1,216 @@
+/* Container for the entire book list */
+.book-list {
+    display: flex;
+    flex-wrap: wrap; /* Allows the books to wrap to the next row */
+    justify-content: space-between; /* Ensures even spacing between books */
+    gap: 20px; /* Space between the book cards */
+    width: 100%;
+    padding: 20px;
+    max-width: 1200px; /* Set a maximum width for the entire book list */
+    margin: 0 auto; /* Center the list container */
+}
+
+/* Book card container */
+.book-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: calc(22% - 20px); /* Reduced width to 22% for larger screens */
+    max-width: 220px; /* Optional max width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+/* Ensure consistent image width and height */
+.book-image {
+    width: 100%; /* Fill the width of the card */
+    height: 220px; /* Reduced height for uniformity */
+    object-fit: cover; /* Cover the image without distortion */
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+/* Book details */
+.book-details h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 5px 0;
+}
+
+.book-details p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Admin-only actions (Edit/Delete buttons) */
+.book-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Button for admin actions */
+.book-actions .btn-link {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-actions .btn-link:hover {
+    background-color: #0056b3;
+}
+
+.book-actions .btn-link a {
+    color: white;
+    text-decoration: none;
+}
+
+.book-actions .btn-link a:hover {
+    text-decoration: underline;
+}
+/* Filter container */
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 20px; /* Center the container and add space below */
+    margin-top: 20px; /* Add margin to the top of the filter container */
+}
+
+/* Filter input styling */
+.filter-input {
+    width: 70%; /* Takes up most of the space, leaving room for the button */
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 10px; /* Add margin to the top of the filter input */
+}
+
+.filter-input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Filter button styling */
+.filter-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 10px; /* Add some spacing between the input and button */
+    margin-top: 10px; /* Add margin to the top of the filter button */
+}
+
+.filter-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.filter-button:focus {
+    outline: none;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Responsive Design for Filter */
+
+/* For screens smaller than 768px (tablets and phones) */
+@media (max-width: 768px) {
+    .filter-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .filter-button {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* Responsive Design */
+
+/* For screens smaller than 1200px (large screens) */
+@media (max-width: 1200px) {
+    .book-card {
+        width: calc(25% - 20px); /* Set each card to 25% width for large screens */
+    }
+}
+
+/* For screens smaller than 992px (tablets and medium devices) */
+@media (max-width: 992px) {
+    .book-card {
+        width: calc(33.33% - 20px); /* Set each card to 33.33% width for medium screens */
+    }
+}
+
+/* For screens smaller than 768px (tablets and phones) */
+@media (max-width: 768px) {
+    .book-card {
+        width: calc(50% - 20px); /* Set each card to 50% width for smaller screens */
+    }
+
+    .book-image {
+        height: 200px; /* Adjust image height for smaller screens */
+    }
+}
+
+/* For screens smaller than 480px (mobile phones) */
+@media (max-width: 480px) {
+    .book-card {
+        width: calc(100% - 20px); /* Set each card to 100% width for mobile screens */
+    }
+
+    .book-image {
+        height: 180px; /* Adjust image height for mobile screens */
+    }
+}
+
+/* Button for booking a book */
+.btn-book {
+    background-color: #28a745; /* Green background for the button */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding around the text */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth background color and shadow transitions */
+    margin-top: 10px; /* Space above the button */
+    text-align: center; /* Center the text */
+    display: block; /* Display as block element to occupy full width */
+}
+
+/* Hover effect for the button */
+.btn-book:hover {
+    background-color: #218838; /* Darker green on hover */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}
+
+/* Focus effect for accessibility */
+.btn-book:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5); /* Green shadow to indicate focus */
+}

@@ -1,0 +1,107 @@
+/* Contact.css */
+
+/* Styling the main contact page container */
+.contact-page {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 40px 0;
+  }
+  
+  /* Center the form and add styling */
+  .contact-page .container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  /* Form label styling */
+  .form-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  /* Form control elements styling */
+  .form-control,
+  .form-select {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+    color: #495057;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Form control focus effect */
+  .form-control:focus,
+  .form-select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  /* Form row and column styling for alignment */
+  .row {
+    margin-bottom: 20px;
+  }
+  
+  /* Column adjustments for better alignment */
+  .col,
+  .mb-md-0 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  /* Specific adjustments for input fields */
+  input,
+  textarea {
+    width: 100%;
+    box-sizing: border-box; /* Ensure inputs don't overflow */
+  }
+  
+  /* Address and Mobile inputs */
+  .form-control[name='address'],
+  .form-control[name='mobile'] {
+    margin-bottom: 15px; /* Space below each field */
+  }
+  
+  /* Submit button styling */
+  .btn-lg {
+    background-color: #dc3545;
+    border: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: #fff;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Button hover effect */
+  .btn-lg:hover {
+    background-color: #c82333;
+    box-shadow: 0 4px 10px rgba(220, 53, 69, 0.2);
+  }
+  
+  /* Toast container styling */
+  .toastify-container {
+    font-size: 14px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 576px) {
+    .contact-page .container {
+      padding: 20px;
+    }
+  
+    .btn-lg {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  
+    .row {
+      flex-direction: column; /* Stack elements on smaller screens */
+    }
+  }
+  
