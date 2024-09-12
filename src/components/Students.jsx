@@ -7,7 +7,7 @@ import '../CSS/Book.css'
 const Student = ({role}) => {
   const [students, setStudents] = useState([])
   useEffect(() => {
-    axios.get('http://localhost:3001/student/students')
+    axios.get(`${baseURL}/student/students`)
     .then(res => {
       setStudents(res.data)
       console.log(res.data)

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import '../CSS/AddStudent.css';
 import { useNavigate } from 'react-router-dom';
+import { baseURL } from '../utils';
+
 const AddStudent = () => {
     const [roll, setRoll] = useState('');
     const [username, setUsername] = useState('');

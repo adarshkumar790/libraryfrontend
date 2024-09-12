@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../CSS/AddStudent.css';
 import { useNavigate, useParams } from 'react-router-dom';
+import { baseURL } from '../utils';
 
 const EditBook = () => {
     const [name, setName] = useState('');

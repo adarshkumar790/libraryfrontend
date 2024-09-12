@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import '../CSS/Dashboard.css';
+import { baseURL } from '../utils';
 
 function Dashboard() {
     const [students, setStudents] = useState(0);
