@@ -14,7 +14,7 @@ import EditBook from './components/EditBook';
 import DeleteBook from './components/DeleteBook';
 import Student from './components/Students';
 import Contact from './components/Contact/Contact';
-import baseURL from './components/baseURL';
+import { baseURL } from './utils';
 function App() {
   const [role, setRole] = useState('')
 
