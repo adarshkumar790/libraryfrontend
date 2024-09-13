@@ -10,7 +10,7 @@ const Login = ({ setRoleVar }) => {
     const [role, setRole] = useState('admin');
     const navigate = useNavigate();
 
-    axios.defaults.withCredentials = true;
+    // axios.defaults.withCredentials = true;
 
     const handleSubmit = () => {
         axios.post(`${baseURL}/auth/login`, {username, password, role})
