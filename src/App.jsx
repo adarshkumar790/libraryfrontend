@@ -14,13 +14,15 @@ import EditBook from './components/EditBook';
 import DeleteBook from './components/DeleteBook';
 import Student from './components/Students';
 import Contact from './components/Contact/Contact';
+import baseURL from './components/baseURL';
 function App() {
   const [role, setRole] = useState('')
 
   axios.defaults.withCredentials = true;
 
   useEffect(()=> {
-      axios.get('http://localhost:3001/auth/verify')
+      axios.get(`${baseURL}/auth/verify`)
+  
    .then(res => {
      if(res.data.login){
        setRole(res.data.role)
