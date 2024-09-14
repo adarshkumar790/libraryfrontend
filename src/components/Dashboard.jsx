@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import '../CSS/Dashboard.css';
 import { baseURL } from '../utils';
+const baseURL = 'https://library-vp9e.onrender.com';
 
 function Dashboard() {
     const [students, setStudents] = useState(0);

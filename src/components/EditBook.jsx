@@ -3,6 +3,7 @@ import axios from 'axios';
 import '../CSS/AddStudent.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import { baseURL } from '../utils';
+const baseURL = 'https://library-vp9e.onrender.com';
 
 const EditBook = () => {
     const [name, setName] = useState('');
@@ -26,7 +27,7 @@ const EditBook = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.put('http://localhost:3001/book/book/'+id, {name, author, imageUrl})
+        axios.put(`${baseURL}/book/book/`+id, {name, author, imageUrl})
         .then(res => {
             if(res.data.updated) {
                 navigate('/books')
